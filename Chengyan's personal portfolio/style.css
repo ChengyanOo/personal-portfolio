@@ -273,25 +273,28 @@ section#services {
 
 .services__left {
   background: var(--color-primary);
-  padding: 2rem;
+  padding: 1rem;
   color: var(--color-light);
+  
 }
 
 .services__left h1 {
-  font-size: 2.9rem;
-  font-weight: 800;
-  color: var(--color-white);
+  margin-top: 50%;
+  font-size: 4rem;
+  font-weight: 900;
+  /* color: var(--color-white); */
+  color: black;
 }
 
 .services__left h4 {
-  line-height: 1.4;
-  font-weight: 600;
-  color: var(--color-black);
+  font-size: 4.3rem;
+  font-weight: 700;
+  color: var(--color-white);
 }
 
 .services__right h2 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
