@@ -202,6 +202,10 @@ header {
 .header__right {
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__socials {
@@ -232,12 +236,34 @@ header {
   right: -30rem;
   bottom: -30rem;
 }
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20pxï;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
 
 .header__image {
-  width: 90%;
-  position: absolute;
-  bottom: -1rem;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__image img {
+  
+  /* float:right; */
+  max-width: 70%;
+  /* position: absolute; */
+  border-radius: 50%;
+  /* bottom: 8rem; */
+  /* z-index: 1; */
 }
 
 /* ================= COMPANIES ============== */
@@ -276,13 +302,12 @@ section#services {
   padding: 1rem;
   color: var(--color-light);
   position: relative;
-  
 }
 
 .services__left h1 {
   position: absolute;
   /* margin-top: 50%; */
-  top:25%;
+  top: 25%;
   font-size: 4rem;
   font-weight: 900;
   /* color: var(--color-white); */
@@ -407,8 +432,10 @@ section#services {
   transform: translateY(calc(-100% + 18rem));
 }
 
- /* ================= SKILLS ============== */
- *, *::before, *::after {
+/* ================= SKILLS ============== */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -433,8 +460,8 @@ section#services {
   align-items: center;
   position: absolute;
   left: 0.5em;
-  top: .5em;
-  bottom: .5em;
+  top: 0.5em;
+  bottom: 0.5em;
   width: calc(var(--width, 0) * 1%);
   min-width: 2rem;
   max-width: calc(50% - 1em);
@@ -540,7 +567,7 @@ footer {
   background: var(--color-primary);
   padding: 1.2rem 0;
   color: var(--color-white);
-  border-top: 1px solid var(--color-black);
+  border-top: 1px solid white;
 }
 
 /* =================== MEDIA QUERIES (TABLETS) =================== */
@@ -713,26 +740,26 @@ footer {
     gap: 1rem;
   }
 
-  .skills{
+  .skills {
     width: 100%;
     max-width: 600px;
     padding: 0 20px;
   }
-  
-  .skill-name{
+
+  .skill-name {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 20px 0;
   }
-  
-  .skill-bar{
+
+  .skill-bar {
     height: 20px;
     background: #701414;
     border-radius: 8px;
   }
-  
-  .skill-per{
+
+  .skill-per {
     height: 20px;
     background-color: #0fbcf9;
     border-radius: 8px;
@@ -740,8 +767,8 @@ footer {
     transition: 1s linear;
     position: relative;
   }
-  
-  .skill-per::before{
+
+  .skill-per::before {
     content: attr(per);
     position: absolute;
     padding: 4px 6px;
@@ -753,9 +780,9 @@ footer {
     right: 0;
     transform: translateX(50%);
   }
-  
-  .skill-per::after{
-    content: '';
+
+  .skill-per::after {
+    content: "";
     position: absolute;
     width: 10px;
     height: 10px;

@@ -3,11 +3,11 @@ const closeBtn = document.querySelector("#close-menu-btn");
 const menu = document.querySelector(".nav__menu");
 const progressBar = document.getElementsByClassName('progress-bar')[0]
 
-setInterval(() => {
-  const computedStyle = getComputedStyle(progressBar)
-  const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
-  progressBar.style.setProperty('--width', width + .1)
-}, 5)
+// setInterval(() => {
+//   const computedStyle = getComputedStyle(progressBar)
+//   const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
+//   progressBar.style.setProperty('--width', width + .1)
+// }, 5)
 
 // open nav menu
 menuBtn.addEventListener("click", () => {
@@ -39,35 +39,4 @@ window.addEventListener("scroll", () => {
     .querySelector("nav")
     .classList.toggle("window-scroll", window.scrollY > 0);
 });
-
-// fetches testimonials from testimonials array
-const fetchTestimonials = () => {
-  let testimonialsContainer = document.querySelector(
-    ".testimonials__container"
-  );
-  testimonialsContainer.innerHTML = "";
-
-  // loop through array and print testimonials
-  testimonials.forEach((testimonial) => {
-    const newTestmonial = document.createElement("article");
-    newTestmonial.className = "testimonial";
-    newTestmonial.innerHTML = `
-        <p>
-        "${testimonial.quote}"
-        </p>
-        <div class="testimonial__client">
-            <span class="avatar">
-                <img src="./images/${testimonial.avatar}.jpg">
-            </span>
-            <div class="testimonial__work">
-                <p><b>${testimonial.name}</b></p>
-                <small>${testimonial.title}</small>
-            </div>
-        </div>`;
-
-    testimonialsContainer.append(newTestmonial);
-  });
-};
-
-window.addEventListener("load", fetchTestimonials);
 
