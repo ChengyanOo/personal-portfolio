@@ -40,3 +40,11 @@ window.addEventListener("scroll", () => {
     .classList.toggle("window-scroll", window.scrollY > 0);
 });
 
+document.getElementById("gravity-button").addEventListener("click", function() {
+  this.classList.add('drop');
+  let btn = document.createElement('b')
+  let newText = document.createTextNode("Email: wang.12517@osu.edu"); 
+  btn.appendChild(newText)
+  this.innerHTML=''
+  this.append(btn)
+});

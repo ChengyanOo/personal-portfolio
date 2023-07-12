@@ -84,6 +84,25 @@ section {
   margin: 5rem 0;
 }
 
+.gravity-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.gravity-button:active {
+  transform: translateY(20px);
+}
+/* @keyframes drop {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+.drop {
+  animation-name: drop;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+} */
+
 .btn {
   background: var(--color-black);
   color: var(--color-white);
