@@ -228,6 +228,7 @@ header {
 }
 
 .header__socials {
+
   position: absolute;
   right: 0;
   bottom: 8rem;
@@ -238,7 +239,7 @@ header {
 }
 
 .header__socials a {
-  color: var(--color-white);
+  color: black;
   transition: all 700ms ease;
 }
 
@@ -276,13 +277,8 @@ header {
 }
 
 .header__image img {
-  
-  /* float:right; */
   max-width: 70%;
-  /* position: absolute; */
   border-radius: 50%;
-  /* bottom: 8rem; */
-  /* z-index: 1; */
 }
 
 /* ================= COMPANIES ============== */
@@ -731,10 +727,12 @@ footer {
 
   .header__socials {
     bottom: 4rem;
+    color:#000;
   }
 
   .header__socials a {
-    color: var(--color-primary);
+    /* color: var(--color-primary); */
+    color:#000;
   }
 
   /* ============== COMPANIES ============== */
